@@ -1,0 +1,35 @@
+1)ADD FILE IN FUNCTIONS(from tag)
+  give_NAME.json
+    {
+      "values": [
+      "RANDOM NAME FOLDER:give_NAME"
+    ]
+    }
+    
+2)ADD FILE IN RECIPES(from random name folder) ITS A JSON ABOUT CRAFTING PATTERN (https://minecraft.tools/en/custom-crafting.php#google_vignette)
+  NAME.json
+
+3)ADD FILE IN ADVANCEMENT(from random name ffolder) (https://advancements.thedestruc7i0n.ca)
+  NAME_adv.json
+  {
+    "criteria": {
+        "UNLOCKED": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "RANDOM NAME FOLDER:NAME"
+            }
+        }
+    },
+    "rewards": {
+        "function": "RANDOM NAME FOLDER:give_NAME"
+    }
+}
+
+4)ADD FILE IN FUNCTIONS(from random name folder)
+  give_NAME.mcfunction 
+  recipe take @s RANDOM NAME FOLDER:NAME
+  advancement revoke @s only RANDOM NAME FOLDER:NAME_adv
+  clear @s minecraft:knowledge_book
+  give @s BASE ITEM{NAME:1b,CustomModelData:2,display:{Name:'{"text":"NAME","italic":true}'}} 1
+
+  
