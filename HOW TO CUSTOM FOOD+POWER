@@ -1,0 +1,20 @@
+1)ADD THIS IN LOAD.MCFUNCTION (from random folder name)
+    
+    scoreboard objectives add BASE ITEM_eat minecraft.used:minecraft.BASE ITEM
+    
+    scoreboard objectives add NAME_delay dummy
+
+2)ADD THIS IN TICK.MCFUNCTION (from random folder name)
+    
+    scoreboard players set @a[nbt={SelectedItem:{id:"minecraft:BASE ITEM",tag:{NAME:1b}}}] NAME_delay 2
+
+
+   
+    
+    execute as @a[scores={NAME_delay=1..,BASE ITEM_eat=1}] at @s run say ANY THING YOU WAANT TO SAY WHEN EAT IT
+    execute as @a[scores={NAME_delay=1..,BASE ITEM_eat=1}] at @s run effect give @s minecraft:POWER AMPILFIER TIME
+
+   
+    scoreboard players reset @a[scores={BASE ITEM_eat=1..}] BASE ITEM_eat
+  
+    execute as @a[scores={NAME_delay=1..}] unless entity @s[nbt={SelectedItem:{id:"minecraft:BASE ITEM",tag:{NAME:1b}}}] run scoreboard players remove @s NAME_delay 1
