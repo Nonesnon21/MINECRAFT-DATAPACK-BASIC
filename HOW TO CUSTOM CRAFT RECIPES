@@ -6,9 +6,30 @@
     ]
     }
     
-2)ADD FILE IN RECIPES(from random name folder) ITS A JSON ABOUT CRAFTING PATTERN (https://minecraft.tools/en/custom-crafting.php#google_vignette)
+2)ADD FILE IN RECIPES(from random name folder) ITS A JSON ABOUT CRAFTING PATTERN (https://crafting.thedestruc7i0n.ca/)
   NAME.json
 
+        EXAMPLE
+    {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "# K",
+        " C ",
+        "K #"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:wheat_seeds"
+        },
+        "K": {
+            "item": "minecraft:kelp"
+        },
+        "C": {
+            "item": "minecraft:cod"
+        }
+    },
+    "result": {"item":"minecraft:knowledge_book","tag":"{Recipes:[]}"}
+}
 3)ADD FILE IN ADVANCEMENT(from random name ffolder) (https://advancements.thedestruc7i0n.ca)
   NAME_adv.json
   {
