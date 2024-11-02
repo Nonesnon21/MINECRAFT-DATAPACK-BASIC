@@ -33,18 +33,19 @@
 3)ADD FILE IN ADVANCEMENT(from random name ffolder) (https://advancements.thedestruc7i0n.ca)
   NAME_adv.json
   {
-    "criteria": {
-        "UNLOCKED": {
-            "trigger": "minecraft:recipe_unlocked",
-            "conditions": {
-                "recipe": "RANDOM NAME FOLDER:NAME"
-            }
-        }
-    },
-    "rewards": {
-        "function": "RANDOM NAME FOLDER:give_NAME"
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipes": "RANDOM FILE FOLDER:NAME"
+      }
     }
+  },
+  "rewards": {
+    "functions": "RANDOM FILE FOLDER:give_NAME"
+  }
 }
+
 
 4)ADD FILE IN FUNCTIONS(from random name folder)
   give_NAME.mcfunction 
