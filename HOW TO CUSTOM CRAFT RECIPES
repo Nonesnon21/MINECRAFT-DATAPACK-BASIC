@@ -10,25 +10,28 @@
   NAME.json
 
         EXAMPLE
-    {
+   {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "# K",
+        "# W",
         " C ",
-        "K #"
+        "W #"
     ],
     "key": {
         "#": {
-            "item": "minecraft:wheat_seeds"
-        },
-        "K": {
             "item": "minecraft:kelp"
+        },
+        "W": {
+            "item": "minecraft:wheat_seeds"
         },
         "C": {
             "item": "minecraft:cod"
         }
     },
-    "result": {"item":"minecraft:knowledge_book","tag":"{Recipes:[]}"}
+    "result": {
+        "item": "minecraft:knowledge_book",
+        "count": 1
+    }
 }
 3)ADD FILE IN ADVANCEMENT(from random name ffolder) (https://advancements.thedestruc7i0n.ca)
   NAME_adv.json
