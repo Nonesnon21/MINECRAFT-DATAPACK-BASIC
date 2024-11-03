@@ -1,0 +1,14 @@
+1) IN LOAD.MCFUNCTION
+   scoreboard objectives add NAME used:BASED ITEM
+   scoreboard objectives add NAMEcooldown dummy
+2)CREATE checkforclick.mcfunction IN RANDOM NAME FOLDER
+  execute as @a[scores={NAME=1..}] run function RANDOM NAME FOLDER:checkforitem
+3)CREATE checkforitem.mcfunction IN RANDOM NAME FOLDER
+  execute as @a[nbt={SelectedItem:{id:"minecraft:BASE ITEM", tag:{CustomModelData: NUMBER }}}] run execute as @e[scores={NAMEcooldown=COOLDOWN TIME..}] run function RANDOM NAME FOLDER:useNAME
+  scoreboard players reset @a NAME
+4)CREATE useNAME.mcfunction
+  YOUR ABILITY
+  scoreboard players reset NAMEcooldown
+5)IN TICK.MCFUNCTION
+  function RANDOM NAME FOLDER:checkforclick   ###ONCE####
+  scoreboard players add @a NAMEcooldown 1
